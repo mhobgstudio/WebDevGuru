@@ -280,13 +280,94 @@
         @media (max-width: 768px) {
             h1 {
                 font-size: 2.2rem;
+                padding: 0 1rem;
             }
             .process-steps {
                 flex-direction: column;
+                gap: 1.5rem;
             }
             .step {
                 width: 100%;
+                padding: 1.5rem;
             }
+            header {
+                padding: 4rem 0;
+                clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+            }
+            .container {
+                width: 95%;
+                padding: 1rem;
+            }
+            .typing-text {
+                font-size: 0.9rem;
+                padding: 0 1rem;
+            }
+            .btn {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.9rem;
+            }
+            section {
+                padding: 3rem 0;
+            }
+            h2 {
+                font-size: 1.8rem;
+                padding: 0 1rem;
+            }
+            .countdown {
+                font-size: 1.4rem;
+                padding: 0.8rem 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            .step h3 {
+                font-size: 1.2rem;
+            }
+            .step i {
+                font-size: 2rem;
+            }
+            .code-snippet {
+                padding: 1rem;
+                font-size: 0.9rem;
+            }
+            .testimonial-author {
+                font-size: 0.9rem;
+            }
+            footer {
+                padding: 2rem 0;
+            }
+            footer p {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Add smooth scrolling for better mobile experience */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Improve touch targets for mobile */
+        .btn {
+            min-height: 44px;
+            min-width: 44px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Prevent text overflow in steps */
+        .step p {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        /* Improve readability on mobile */
+        body {
+            -webkit-text-size-adjust: 100%;
+            -webkit-font-smoothing: antialiased;
         }
     </style>
 </head>
@@ -306,7 +387,7 @@
     <section id="about">
         <div class="container">
             <h2 class="section-title">Our Proven Process</h2>
-            <p style="color: var(--text-secondary);">We use a streamlined method — from planning to launch — that saves you time without sacrificing quality. This site you're viewing is a living example of what's possible in just one week.</p>
+            <p style="color: var(--text-secondary);">We use a streamlined method — from planning to launch — that saves you time without sacrificing quality. This site you're viewing is a living example of what's possible in just one week, "well honestly I built this in less than half a day so...yh, a week should be fine ".</p>
             
             <div class="process-steps">
                 <div class="step">
@@ -365,7 +446,7 @@
         <div class="container" style="text-align: center;">
             <h2 class="section-title">Your future website is just a week away</h2>
             <p style="color: var(--text-secondary);">Let's build it — fast, beautiful, and effective.</p>
-            <a href="#" class="btn">Book Your Free Consultation</a>
+            <a href="#direct-contact" class="btn">Book Your Free Consultation</a>
         </div>
     </section>
 
@@ -404,7 +485,7 @@
     <footer>
         <div class="container">
             <p>Built with the same 7-day system we offer you.</p>
-            <p>&copy; 2023 Your Website in 1 Week. All rights reserved.</p>
+            <p>&copy; 2025 Your Website in 1 Week. All rights reserved.</p>
         </div>
     </footer>
     <script>
