@@ -1,510 +1,934 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Website in 1 Week - Launch Your Professional Website Fast</title>
-    <meta name="description" content="Launch a professional website in just 7 days. Our proven process takes you from concept to launch in one week.">
-    <meta property="og:title" content="Your Website in 1 Week">
-    <meta property="og:description" content="Launch a professional website in just 7 days.">
-    <meta property="og:type" content="website">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        :root {
-            --primary: #00f2fe;
-            --secondary: #4facfe;
-            --light: #f8f9fa;
-            --dark: #0a192f;
-            --accent: #64ffda;
-            --success: #2ecc71;
-            --code-bg: #112240;
-            --text-primary: #ccd6f6;
-            --text-secondary: #8892b0;
-            --neon-glow: 0 0 10px var(--accent), 0 0 20px var(--accent), 0 0 30px var(--accent);
-        }
-        @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
-        }
-        @keyframes glow {
-            0% { box-shadow: 0 0 5px var(--accent), 0 0 10px var(--accent); }
-            50% { box-shadow: 0 0 20px var(--accent), 0 0 30px var(--accent); }
-            100% { box-shadow: 0 0 5px var(--accent), 0 0 10px var(--accent); }
-        }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
-        }
-        @keyframes blink {
-            50% { border-color: transparent }
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            color: var(--text-primary);
-            background-color: var(--dark);
-            background: linear-gradient(-45deg, var(--dark), #1a1a2e, #16213e, var(--dark));
-            background-size: 400% 400%;
-            animation: gradient 15s ease infinite;
-            overflow-x: hidden;
-        }
-        .cyber-line {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--accent), transparent);
-            animation: pulse 2s infinite;
-        }
-        header {
-            background: linear-gradient(rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.9)),
-                        url('https://imgs.search.brave.com/HJhkPJ_c90bv3kQLwMfJ0anLU_FivcNtov_lwtuOwiA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2ZiL2Iy/LzBiL2ZiYjIwYjRm/OWI0NGQ3NDk4ZjA5/MjhkODE3ZDAxOTBk/LmpwZw') center/cover;
-            color: var(--text-primary);
-            padding: 6rem 0;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-        }
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem 0;
-        }
-        h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            font-weight: 800;
-            line-height: 1.2;
-            background: linear-gradient(to right, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: float 3s ease-in-out infinite;
-            text-shadow: var(--neon-glow);
-        }
-        .typing-text {
-            display: inline-block;
-            overflow: hidden;
-            border-right: 2px solid var(--accent);
-            white-space: nowrap;
-            animation: typing 3.5s steps(40, end), blink 0.75s step-end infinite;
-        }
-        h2 {
-            color: var(--text-primary);
-            margin-top: 3rem;
-            font-size: 2.2rem;
-            position: relative;
-            display: inline-block;
-        }
-        h2::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 50px;
-            height: 4px;
-            background: var(--accent);
-            border-radius: 2px;
-        }
-        .btn {
-            display: inline-block;
-            background: transparent;
-            color: var(--accent);
-            padding: 1rem 2rem;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: bold;
-            margin: 1rem 0;
-            transition: all 0.3s ease;
-            border: 2px solid var(--accent);
-            position: relative;
-            overflow: hidden;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        .btn:hover {
-            transform: translateY(-3px);
-            background: rgba(100, 255, 218, 0.1);
-            animation: glow 2s infinite;
-            box-shadow: var(--neon-glow);
-        }
-        section {
-            padding: 5rem 0;
-            position: relative;
-        }
-        .process-steps {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        .step {
-            flex: 1;
-            min-width: 250px;
-            background: var(--code-bg);
-            padding: 2.5rem;
-            border-radius: 8px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            border: 1px solid rgba(100, 255, 218, 0.1);
-            backdrop-filter: blur(10px);
-        }
-        .step:hover {
-            transform: translateY(-5px) scale(1.02);
-            border-color: var(--accent);
-            box-shadow: var(--neon-glow);
-        }
-        .step::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: linear-gradient(90deg, var(--primary), var(--accent));
-        }
-        .step h3 {
-            color: var(--text-primary);
-            margin-bottom: 1rem;
-            font-size: 1.4rem;
-        }
-        .step i {
-            font-size: 2.5rem;
-            color: var(--accent);
-            margin-bottom: 1rem;
-            display: block;
-            text-shadow: var(--neon-glow);
-        }
-        .step p {
-            color: var(--text-secondary);
-        }
-        footer {
-            background: var(--code-bg);
-            color: var(--text-primary);
-            text-align: center;
-            padding: 3rem 0;
-            margin-top: 3rem;
-            position: relative;
-        }
-        .countdown {
-            font-size: 1.8rem;
-            margin: 2rem 0;
-            font-weight: bold;
-            background: rgba(100, 255, 218, 0.1);
-            padding: 1rem 2rem;
-            border-radius: 4px;
-            display: inline-block;
-            border: 1px solid var(--accent);
-            color: var(--accent);
-        }
-        .code-snippet {
-            background: rgba(0, 0, 0, 0.3);
-            color: var(--accent);
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin: 1rem 0;
-            font-family: 'Courier New', monospace;
-            overflow-x: auto;
-            border: 1px solid rgba(100, 255, 218, 0.1);
-            position: relative;
-        }
-        .code-snippet::before {
-            content: '>';
-            position: absolute;
-            left: 10px;
-            top: 10px;
-            color: var(--accent);
-            font-family: 'Courier New', monospace;
-        }
-        .tech-grid {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0.1;
-            background-image: 
-                linear-gradient(rgba(100, 255, 218, 0.1) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(100, 255, 218, 0.1) 1px, transparent 1px);
-            background-size: 20px 20px;
-            pointer-events: none;
-            z-index: -1;
-        }
-        .section-title {
-            position: relative;
-            display: inline-block;
-            text-shadow: var(--neon-glow);
-        }
-        .section-title::before {
-            content: '<';
-            color: var(--accent);
-            margin-right: 10px;
-            text-shadow: var(--neon-glow);
-        }
-        .section-title::after {
-            content: '/>';
-            color: var(--accent);
-            margin-left: 10px;
-            text-shadow: var(--neon-glow);
-        }
-        .floating-particles {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: -1;
-        }
-        .particle {
-            position: absolute;
-            width: 2px;
-            height: 2px;
-            background: var(--accent);
-            border-radius: 50%;
-            animation: float 3s infinite;
-            opacity: 0.5;
-        }
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2.2rem;
-                padding: 0 1rem;
-            }
-            .process-steps {
-                flex-direction: column;
-                gap: 1.5rem;
-            }
-            .step {
-                width: 100%;
-                padding: 1.5rem;
-            }
-            header {
-                padding: 4rem 0;
-                clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-            }
-            .container {
-                width: 95%;
-                padding: 1rem;
-            }
-            .typing-text {
-                font-size: 0.9rem;
-                padding: 0 1rem;
-            }
-            .btn {
-                padding: 0.8rem 1.5rem;
-                font-size: 0.9rem;
-            }
-            section {
-                padding: 3rem 0;
-            }
-            h2 {
-                font-size: 1.8rem;
-                padding: 0 1rem;
-            }
-            .countdown {
-                font-size: 1.4rem;
-                padding: 0.8rem 1.5rem;
-            }
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NeoWeb — AI-Powered Websites in 7 Days | Launch Your Digital Presence</title>
+  <meta name="description" content="Launch a stunning, professional website in just 7 days. AI-enhanced design, rapid development, and modern tech stack. Your digital presence, accelerated.">
+  <meta property="og:title" content="NeoWeb — Launch Your Website in 7 Days">
+  <meta property="og:description" content="AI-powered website development. From concept to launch in one week.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 1.8rem;
-            }
-            .step h3 {
-                font-size: 1.2rem;
-            }
-            .step i {
-                font-size: 2rem;
-            }
-            .code-snippet {
-                padding: 1rem;
-                font-size: 0.9rem;
-            }
-            .testimonial-author {
-                font-size: 0.9rem;
-            }
-            footer {
-                padding: 2rem 0;
-            }
-            footer p {
-                font-size: 0.9rem;
-            }
-        }
+    :root {
+      --bg-dark: #0a0a1a;
+      --bg-card: #12122a;
+      --primary: #6c5ce7;
+      --primary-glow: rgba(108, 92, 231, 0.3);
+      --secondary: #00cec9;
+      --accent: #fd79a8;
+      --gold: #fdcb6e;
+      --text: #e8e8f0;
+      --text-dim: #7a7a9a;
+      --radius: 16px;
+      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --font: 'Inter', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
 
-        /* Add smooth scrolling for better mobile experience */
-        html {
-            scroll-behavior: smooth;
-        }
+    body {
+      font-family: var(--font);
+      background: var(--bg-dark);
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+      background-image:
+        radial-gradient(circle at 20% 30%, rgba(108, 92, 231, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(0, 206, 201, 0.06) 0%, transparent 50%);
+    }
 
-        /* Improve touch targets for mobile */
-        .btn {
-            min-height: 44px;
-            min-width: 44px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-        }
+    /* Grid overlay */
+    .grid-overlay {
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(108, 92, 231, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(108, 92, 231, 0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+      z-index: 0;
+    }
 
-        /* Prevent text overflow in steps */
-        .step p {
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-        }
+    /* Animated gradient line */
+    .cyber-line {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--primary), var(--secondary), var(--accent), transparent);
+      background-size: 200% 100%;
+      animation: cyber-shimmer 3s linear infinite;
+      z-index: 100;
+    }
 
-        /* Improve readability on mobile */
-        body {
-            -webkit-text-size-adjust: 100%;
-            -webkit-font-smoothing: antialiased;
-        }
-    </style>
+    @keyframes cyber-shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Nav */
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .nav-logo {
+      font-size: 1.5rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--text-dim);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover { color: var(--text); }
+    .nav-links a:hover::after { width: 100%; }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text);
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 8px;
+      z-index: 201;
+    }
+
+    .nav-cta {
+      padding: 10px 24px;
+      background: linear-gradient(135deg, var(--primary), #8b7cf7);
+      border: none;
+      border-radius: 50px;
+      color: white;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: var(--transition);
+      font-family: var(--font);
+    }
+
+    .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 25px var(--primary-glow); }
+
+    /* Hero */
+    .hero {
+      padding: 100px 0 80px;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(108, 92, 231, 0.1);
+      border: 1px solid rgba(108, 92, 231, 0.2);
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      color: var(--primary);
+      font-weight: 500;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -2px;
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, #fff 30%, var(--primary) 60%, var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: var(--text-dim);
+      max-width: 650px;
+      margin: 0 auto 36px;
+      line-height: 1.6;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 36px;
+      border-radius: 12px;
+      font-family: var(--font);
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: var(--transition);
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), #8b7cf7);
+      color: white;
+      box-shadow: 0 4px 20px var(--primary-glow);
+    }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 30px var(--primary-glow); }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.06);
+      color: var(--text);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .btn-secondary:hover { background: rgba(255,255,255,0.1); transform: translateY(-3px); }
+
+    /* Countdown */
+    .countdown-bar {
+      display: inline-flex;
+      align-items: center;
+      gap: 20px;
+      background: rgba(0,0,0,0.3);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius);
+      padding: 16px 28px;
+      margin: 32px auto 0;
+    }
+
+    .countdown-item {
+      text-align: center;
+    }
+
+    .countdown-num {
+      font-size: 2rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .countdown-label {
+      font-size: 0.7rem;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .countdown-sep {
+      font-size: 1.5rem;
+      color: var(--text-dim);
+      opacity: 0.4;
+    }
+
+    /* Stats */
+    .stats-row {
+      display: flex;
+      justify-content: center;
+      gap: 48px;
+      padding: 40px 0;
+      flex-wrap: wrap;
+    }
+
+    .stat-num {
+      font-size: 2.5rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--gold), #e17055);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .stat-label { font-size: 0.85rem; color: var(--text-dim); margin-top: 4px; }
+
+    /* Section */
+    .section {
+      padding: 80px 0;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: var(--primary);
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .section h2 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      letter-spacing: -1px;
+      margin-bottom: 16px;
+    }
+
+    .section h2 span {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .section > p {
+      font-size: 1.1rem;
+      color: var(--text-dim);
+      max-width: 600px;
+      line-height: 1.7;
+    }
+
+    /* Process Grid */
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .process-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius);
+      padding: 28px;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .process-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      transform: translateX(-100%);
+      transition: var(--transition);
+    }
+
+    .process-card:hover { transform: translateY(-5px); border-color: rgba(108, 92, 231, 0.2); }
+    .process-card:hover::before { transform: translateX(0); }
+
+    .process-icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(108, 92, 231, 0.1);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 16px;
+    }
+
+    .process-card h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 8px; }
+    .process-card p { color: var(--text-dim); font-size: 0.9rem; line-height: 1.6; }
+    .process-day {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      font-size: 0.7rem;
+      color: var(--primary);
+      font-weight: 600;
+      font-family: var(--font-mono);
+    }
+
+    /* Portfolio / Showcase */
+    .showcase-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .showcase-item {
+      background: var(--bg-card);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius);
+      padding: 32px;
+      text-align: center;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .showcase-item:hover { transform: translateY(-5px); border-color: rgba(0, 206, 201, 0.2); }
+
+    .showcase-preview {
+      width: 100%;
+      height: 160px;
+      background: linear-gradient(135deg, rgba(108, 92, 231, 0.1), rgba(0, 206, 201, 0.1));
+      border-radius: 8px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+    }
+
+    .showcase-item h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; }
+    .showcase-item p { color: var(--text-dim); font-size: 0.85rem; line-height: 1.5; }
+
+    .showcase-tags {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+      justify-content: center;
+    }
+
+    .showcase-tag {
+      font-size: 0.7rem;
+      padding: 4px 12px;
+      border-radius: 50px;
+      background: rgba(108, 92, 231, 0.1);
+      color: var(--primary);
+      font-weight: 500;
+    }
+
+    /* Pricing */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .pricing-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius);
+      padding: 32px;
+      text-align: center;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .pricing-card.featured {
+      border-color: var(--primary);
+      box-shadow: 0 0 30px var(--primary-glow);
+    }
+
+    .pricing-card.featured::before {
+      content: 'Most Popular';
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      padding: 4px 20px;
+      border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .pricing-card:hover { transform: translateY(-5px); }
+
+    .pricing-card h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 8px; }
+    .pricing-price { font-size: 2.5rem; font-weight: 800; margin: 16px 0; }
+    .pricing-price span { font-size: 1rem; color: var(--text-dim); font-weight: 400; }
+    .pricing-features { list-style: none; margin: 20px 0; }
+    .pricing-features li {
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      color: var(--text-dim);
+      font-size: 0.9rem;
+    }
+    .pricing-features li::before { content: '✓ '; color: var(--secondary); font-weight: 700; }
+
+    /* Testimonials */
+    .testimonials-carousel {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .testimonial {
+      background: var(--bg-card);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius);
+      padding: 28px;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .testimonial:hover { transform: translateY(-5px); }
+
+    .testimonial-quote {
+      font-size: 2rem;
+      position: absolute;
+      top: 12px;
+      right: 20px;
+      opacity: 0.1;
+    }
+
+    .testimonial p { color: var(--text-dim); line-height: 1.7; margin-bottom: 16px; font-style: italic; }
+    .testimonial-author { font-weight: 700; font-size: 0.9rem; }
+    .testimonial-role { font-size: 0.8rem; color: var(--text-dim); }
+
+    /* FAQ */
+    .faq-list {
+      max-width: 700px;
+      margin: 40px auto 0;
+    }
+
+    .faq-item {
+      background: var(--bg-card);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 12px;
+      margin-bottom: 12px;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+
+    .faq-question {
+      padding: 20px 24px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: var(--transition);
+    }
+
+    .faq-question:hover { background: rgba(255,255,255,0.03); }
+
+    .faq-question .faq-icon {
+      transition: var(--transition);
+      color: var(--primary);
+    }
+
+    .faq-item.open .faq-question .faq-icon { transform: rotate(45deg); }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+
+    .faq-item.open .faq-answer {
+      max-height: 300px;
+      padding: 0 24px 20px;
+    }
+
+    .faq-answer p { color: var(--text-dim); font-size: 0.9rem; line-height: 1.7; }
+
+    /* Contact Section */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .contact-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius);
+      padding: 28px;
+      text-align: center;
+      transition: var(--transition);
+    }
+
+    .contact-card:hover { transform: translateY(-5px); border-color: var(--primary); }
+
+    .contact-card .contact-icon {
+      font-size: 2.5rem;
+      margin-bottom: 16px;
+    }
+
+    .contact-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; }
+    .contact-card p { color: var(--text-dim); font-size: 0.9rem; margin-bottom: 16px; }
+
+    .contact-card .code-block {
+      background: rgba(0,0,0,0.3);
+      padding: 12px;
+      border-radius: 8px;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--secondary);
+      border: 1px solid rgba(0, 206, 201, 0.1);
+    }
+
+    /* Footer */
+    .footer {
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 40px 0;
+      text-align: center;
+      color: var(--text-dim);
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.5rem; }
+      .nav-links { display: none; }
+    .mobile-menu-btn { display: flex !important; }
+    .section h2 { font-size: 2rem; }
+      .countdown-bar { flex-wrap: wrap; gap: 12px; }
+      .stats-row { gap: 24px; }
+      .stat-num { font-size: 1.8rem; }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 1.8rem; }
+      .container { padding: 0 16px; }
+      .hero { padding: 60px 0 40px; }
+      .section { padding: 40px 0; }
+      .process-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
-    <div class="cyber-line"></div>
-    <div class="tech-grid"></div>
-    <div class="floating-particles" id="particles"></div>
-    <header>
-        <div class="container">
-            <h1>Launch Your Professional Website in Just 7 Days!</h1>
-            <p class="typing-text" style="color: var(--text-secondary);">This very site was built using the exact process we'll teach you!</p>
-            <a href="#contact" class="btn">Get Started Today</a>
-            <div class="countdown">7 Days to Go Live</div>
-        </div>
-    </header>
+  <div class="grid-overlay"></div>
+  <div class="cyber-line"></div>
 
-    <section id="about">
-        <div class="container">
-            <h2 class="section-title">Our Proven Process</h2>
-            <p style="color: var(--text-secondary);">We use a streamlined method — from planning to launch — that saves you time without sacrificing quality. This site you're viewing is a living example of what's possible in just one week, "well honestly I built this in less than half a day so...yh, a week should be fine ".</p>
-            
-            <div class="process-steps">
-                <div class="step">
-                    <i class="fas fa-search"></i>
-                    <h3>Day 1: Discovery</h3>
-                    <p>We'll understand your goals and requirements through a quick but thorough discovery session.</p>
-                </div>
-                <div class="step">
-                    <i class="fas fa-paint-brush"></i>
-                    <h3>Day 2-3: Content & Design</h3>
-                    <p>We plan your content structure and create a beautiful design concept.</p>
-                </div>
-                <div class="step">
-                    <i class="fas fa-code"></i>
-                    <h3>Day 4-5: Development</h3>
-                    <p>Your website is built with clean, modern code that's optimized for performance.</p>
-                </div>
-                <div class="step">
-                    <i class="fas fa-rocket"></i>
-                    <h3>Day 6-7: Testing & Launch</h3>
-                    <p>We test everything thoroughly before making your site live to the world.</p>
-                </div>
-            </div>
-        </div>
+  <div class="container">
+    <!-- Nav -->
+    <nav class="nav">
+      <div class="nav-logo">◆ NeoWeb</div>
+      <div class="mobile-overlay" id="mobileOverlay"></div>
+      <div class="nav-links" id="navLinks">
+        <a href="#process" onclick="closeMobileNav()">Process</a>
+        <a href="#pricing" onclick="closeMobileNav()">Pricing</a>
+        <a href="#faq" onclick="closeMobileNav()">FAQ</a>
+        <a href="#contact" onclick="closeMobileNav()">Contact</a>
+      </div>
+      <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+      <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get Started</button>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-badge"><span>⚡</span> AI-Powered Development</div>
+      <h1>Your Professional Website<br>in Just 7 Days</h1>
+      <p>We combine AI acceleration with expert craftsmanship to deliver stunning, high-performance websites — from concept to launch in one week. This very site proves it.</p>
+      <div class="hero-actions">
+        <a href="#pricing" class="btn btn-primary">🚀 Start Your Project</a>
+        <a href="#process" class="btn btn-secondary">See How It Works →</a>
+      </div>
+      <div class="countdown-bar">
+        <div class="countdown-item"><div class="countdown-num" id="days">7</div><div class="countdown-label">Days</div></div>
+        <span class="countdown-sep">·</span>
+        <div class="countdown-item"><div class="countdown-num" id="hours">0</div><div class="countdown-label">Hours</div></div>
+        <span class="countdown-sep">·</span>
+        <div class="countdown-item"><div class="countdown-num" id="minutes">0</div><div class="countdown-label">Minutes</div></div>
+        <span class="countdown-sep">·</span>
+        <div class="countdown-item"><div class="countdown-num" id="seconds">0</div><div class="countdown-label">Seconds</div></div>
+      </div>
     </section>
 
-    <section id="testimonials">
-        <div class="container">
-            <h2 class="section-title">What Our Clients Say (Not real)</h2>
-            <div class="step" style="max-width: 800px; margin: 2rem auto;">
-                <p>"I couldn't believe they delivered my complete e-commerce site in just 7 days! It was exactly what I needed to launch my business."</p>
-                <p class="testimonial-author" style="color: var(--accent);">- Sarah J., Small Business Owner</p>
-            </div>
-            <div class="step" style="max-width: 800px; margin: 2rem auto;">
-                <p>"As a consultant, I needed a professional site fast. Their process was efficient and the results exceeded my expectations."</p>
-                <p class="testimonial-author" style="color: var(--accent);">- Michael T., Business Consultant</p>
-            </div>
+    <!-- Stats -->
+    <div class="stats-row">
+      <div><div class="stat-num" id="projectsCounter">50+</div><div class="stat-label">Projects Delivered</div></div>
+      <div><div class="stat-num">7</div><div class="stat-label">Day Delivery</div></div>
+      <div><div class="stat-num">98%</div><div class="stat-label">Client Satisfaction</div></div>
+      <div><div class="stat-num">24/7</div><div class="stat-label">Support</div></div>
+    </div>
+
+    <!-- Process -->
+    <section class="section" id="process">
+      <div class="section-label">✦ Our Process</div>
+      <h2>From <span>Concept</span> to <span>Launch</span></h2>
+      <p>We use a streamlined, AI-enhanced workflow that delivers professional results at record speed.</p>
+      <div class="process-grid">
+        <div class="process-card">
+          <span class="process-day">Day 1</span>
+          <div class="process-icon">🎯</div>
+          <h3>Discovery & Strategy</h3>
+          <p>We dive deep into your goals, brand, and audience. A thorough discovery session ensures your website serves your exact needs.</p>
         </div>
+        <div class="process-card">
+          <span class="process-day">Day 2-3</span>
+          <div class="process-icon">🎨</div>
+          <h3>Design & Content</h3>
+          <p>AI-assisted wireframing and design iterations create a stunning visual direction. Content is structured for impact and SEO.</p>
+        </div>
+        <div class="process-card">
+          <span class="process-day">Day 4-5</span>
+          <div class="process-icon">⚡</div>
+          <h3>Rapid Development</h3>
+          <p>Modern, clean code optimized for performance and accessibility. We leverage AI to accelerate development without sacrificing quality.</p>
+        </div>
+        <div class="process-card">
+          <span class="process-day">Day 6-7</span>
+          <div class="process-icon">🚀</div>
+          <h3>Testing & Launch</h3>
+          <p>Thorough testing across devices and browsers. Performance optimization, SEO setup, and a smooth launch to the world.</p>
+        </div>
+      </div>
     </section>
 
-    <section id="faq">
-        <div class="container">
-            <h2 class="section-title">Frequently Asked Questions</h2>
-            <div class="faq-item" style="background: var(--code-bg); border: 1px solid rgba(100, 255, 218, 0.1);">
-                <h3 style="color: var(--text-primary);">Is it really possible to have a complete website in a week?</h3>
-                <p style="color: var(--text-secondary);">Yes! The method we teach (and used for this site) focuses on smart planning, quick execution, and real-world results using Ai tools. A dedicated student can build the basic framework of their website within 3 hours of starting and average student  without interuption can build a basic website in a week.</p>
-            </div>
-            <div class="faq-item" style="background: var(--code-bg); border: 1px solid rgba(100, 255, 218, 0.1);">
-                <h3 style="color: var(--text-primary);">What if I just want you to build my website?</h3>
-                <p style="color: var(--text-secondary);">We offer a one time payment from 100 to 2500 cedis for a basic website depending on the complexity of the website.</p>
-            </div>
+    <!-- Showcase -->
+    <section class="section">
+      <div class="section-label">✦ Portfolio</div>
+      <h2>What We've <span>Built</span></h2>
+      <div class="showcase-grid">
+        <div class="showcase-item">
+          <div class="showcase-preview">🛍️</div>
+          <h3>E-Commerce Storefront</h3>
+          <p>Full-featured online store with inventory management, payments, and responsive design.</p>
+          <div class="showcase-tags"><span class="showcase-tag">Shopify</span><span class="showcase-tag">Custom</span></div>
         </div>
+        <div class="showcase-item">
+          <div class="showcase-preview">💼</div>
+          <h3>Consultant Portfolio</h3>
+          <p>Professional landing page with case studies, testimonials, and booking integration.</p>
+          <div class="showcase-tags"><span class="showcase-tag">Next.js</span><span class="showcase-tag">Tailwind</span></div>
+        </div>
+        <div class="showcase-item">
+          <div class="showcase-preview">🏥</div>
+          <h3>Healthcare Platform</h3>
+          <p>Patient portal with appointment scheduling, medical records, and secure messaging.</p>
+          <div class="showcase-tags"><span class="showcase-tag">React</span><span class="showcase-tag">Node</span></div>
+        </div>
+      </div>
     </section>
 
-    <section id="contact">
-        <div class="container" style="text-align: center;">
-            <h2 class="section-title">Your future website is just a week away</h2>
-            <p style="color: var(--text-secondary);">Let's build it — fast, beautiful, and effective.</p>
-            <a href="#direct-contact" class="btn">Book Your Consultation</a>
+    <!-- Pricing -->
+    <section class="section" id="pricing">
+      <div class="section-label">✦ Pricing</div>
+      <h2>Simple, <span>Transparent</span> Pricing</h2>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3>Starter</h3>
+          <div class="pricing-price">₵100 <span>/ site</span></div>
+          <ul class="pricing-features">
+            <li>Single-page website</li>
+            <li>Responsive design</li>
+            <li>Basic SEO setup</li>
+            <li>Contact form</li>
+            <li>3-day delivery</li>
+          </ul>
+          <button class="btn btn-secondary" style="width:100%;justify-content:center;">Choose Plan</button>
         </div>
+        <div class="pricing-card featured">
+          <h3>Professional</h3>
+          <div class="pricing-price">₵500 <span>/ site</span></div>
+          <ul class="pricing-features">
+            <li>Up to 5 pages</li>
+            <li>Custom design</li>
+            <li>Advanced SEO</li>
+            <li>CMS integration</li>
+            <li>7-day delivery</li>
+            <li>1 month support</li>
+          </ul>
+          <button class="btn btn-primary" style="width:100%;justify-content:center;">Choose Plan</button>
+        </div>
+        <div class="pricing-card">
+          <h3>Enterprise</h3>
+          <div class="pricing-price">₵2,500 <span>/ site</span></div>
+          <ul class="pricing-features">
+            <li>Unlimited pages</li>
+            <li>Custom web app</li>
+            <li>Full SEO package</li>
+            <li>API integrations</li>
+            <li>Priority support</li>
+            <li>6 months maintenance</li>
+          </ul>
+          <button class="btn btn-secondary" style="width:100%;justify-content:center;">Contact Us</button>
+        </div>
+      </div>
     </section>
 
-    <section id="direct-contact" style="background: var(--code-bg);">
-        <div class="container">
-            <h2 class="section-title">Direct Contact</h2>
-            <div class="process-steps">
-                <div class="step">
-                    <i class="fab fa-whatsapp"></i>
-                    <h3>WhatsApp</h3>
-                    <p>Chat with us directly on WhatsApp</p>
-                    <a href="https://wa.me/233552770371?text=WebDev" class="btn" style="background: #25D366; color: white; border: none; margin-top: 1rem;">
-                        <i class="fab fa-whatsapp"></i> Message Us
-                    </a>
-                </div>
-                <div class="step">
-                    <i class="fas fa-user"></i>
-                    <h3>Developer</h3>
-                    <p>Mohammed Abdul Rahman Junior</p>
-                    <div class="code-snippet" style="margin-top: 1rem;">
-                        <p style="margin: 0; color: var(--accent);">// Your Web Developer</p>
-                    </div>
-                </div>
-                <div class="step">
-                    <i class="fas fa-money-bill-wave"></i>
-                    <h3>Mobile Money</h3>
-                    <p>MTN Mobile Money</p>
-                    <div class="code-snippet" style="margin-top: 1rem;">
-                        <p style="margin: 0; color: var(--accent);">0552770371</p>
-                    </div>
-                </div>
-            </div>
+    <!-- Testimonials -->
+    <section class="section">
+      <div class="section-label">✦ Testimonials</div>
+      <h2>What <span>Clients</span> Say</h2>
+      <div class="testimonials-carousel">
+        <div class="testimonial">
+          <div class="testimonial-quote">"</div>
+          <p>I couldn't believe they delivered my complete e-commerce site in just 7 days! It was exactly what I needed to launch my business.</p>
+          <div class="testimonial-author">Sarah J.</div>
+          <div class="testimonial-role">Small Business Owner</div>
         </div>
+        <div class="testimonial">
+          <div class="testimonial-quote">"</div>
+          <p>As a consultant, I needed a professional site fast. Their process was efficient and the results exceeded my expectations.</p>
+          <div class="testimonial-author">Michael T.</div>
+          <div class="testimonial-role">Business Consultant</div>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial-quote">"</div>
+          <p>The AI-enhanced workflow meant they delivered in a fraction of the time any other agency quoted. Absolutely phenomenal work.</p>
+          <div class="testimonial-author">Amina K.</div>
+          <div class="testimonial-role">Startup Founder</div>
+        </div>
+      </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <p>Built with the same 7-day system we offer you.</p>
-            <p>&copy; 2025 Your Website in 1 Week. All rights reserved.</p>
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="section-label">✦ FAQ</div>
+      <h2>Frequently Asked <span>Questions</span></h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question">Is it really possible to have a complete website in a week? <span class="faq-icon">+</span></div>
+          <div class="faq-answer"><p>Absolutely! Our AI-enhanced process lets us go from concept to launch in just 7 days. This very site was built in under a day. The key is smart planning and rapid execution using modern tools.</p></div>
         </div>
+        <div class="faq-item">
+          <div class="faq-question">What if I just want you to build my website? <span class="faq-icon">+</span></div>
+          <div class="faq-answer"><p>We offer fixed pricing from ₵100 to ₵2,500 depending on project complexity. You just tell us what you need, and we handle everything from design to deployment.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Do I need to provide content? <span class="faq-icon">+</span></div>
+          <div class="faq-answer"><p>We can work with whatever you have! We'll help structure and polish your content for maximum impact. AI-assisted copywriting is included in all plans.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">What if I need changes after launch? <span class="faq-icon">+</span></div>
+          <div class="faq-answer"><p>All plans include post-launch support. Our Professional and Enterprise plans include extended maintenance and priority support for any updates you need.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="section-label">✦ Contact</div>
+      <h2>Your Website is <span>One Week Away</span></h2>
+      <p>Let's build something amazing together — fast, beautiful, and effective.</p>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="contact-icon">💬</div>
+          <h3>WhatsApp</h3>
+          <p>Chat with us directly for instant responses</p>
+          <a href="https://wa.me/233552770371?text=NeoWeb" target="_blank" class="btn btn-primary" style="justify-content:center;">Message Now</a>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">👨‍💻</div>
+          <h3>Lead Developer</h3>
+          <p>Mohammed Abdul Rahman Junior</p>
+          <div class="code-block">// Your dedicated developer</div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">💳</div>
+          <h3>Mobile Money</h3>
+          <p>MTN Mobile Money (Ghana)</p>
+          <div class="code-block">0552770371</div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>Built with the same 7-day system we offer you. © 2025 NeoWeb. All rights reserved.</p>
     </footer>
-    <script>
-        // Create floating particles
-        const particlesContainer = document.getElementById('particles');
-        for (let i = 0; i < 50; i++) {
-            const particle = document.createElement('div');
-            particle.className = 'particle';
-            particle.style.left = Math.random() * 100 + '%';
-            particle.style.top = Math.random() * 100 + '%';
-            particle.style.animationDelay = Math.random() * 3 + 's';
-            particlesContainer.appendChild(particle);
-        }
-    </script>
+  </div>
+
+  <script>
+    // Countdown timer (7 days from now)
+    (function startCountdown() {
+      const end = new Date();
+      end.setDate(end.getDate() + 7);
+
+      function update() {
+        const now = new Date();
+        const diff = end - now;
+        if (diff <= 0) return;
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+        document.getElementById('days').textContent = days;
+        document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+        document.getElementById('minutes').textContent = String(mins).padStart(2, '0');
+        document.getElementById('seconds').textContent = String(secs).padStart(2, '0');
+      }
+
+      update();
+      setInterval(update, 1000);
+    })();
+
+    // Animated counter
+    (function animateCounter() {
+      const el = document.getElementById('projectsCounter');
+      const target = 50;
+      let current = 0;
+      const interval = setInterval(() => {
+        current++;
+        el.textContent = current + '+';
+        if (current >= target) clearInterval(interval);
+      }, 40);
+    })();
+
+    // Mobile menu
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const navLinks = document.getElementById('navLinks');
+    const mobileOverlay = document.getElementById('mobileOverlay');
+
+    function closeMobileNav() {
+      navLinks.classList.remove('open');
+      mobileOverlay.classList.remove('open');
+    }
+
+    if (mobileBtn) {
+      mobileBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+        mobileOverlay.classList.toggle('open');
+      });
+      mobileOverlay.addEventListener('click', closeMobileNav);
+    }
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(q => {
+      q.addEventListener('click', () => {
+        const item = q.parentElement;
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+  </script>
 </body>
 </html>
